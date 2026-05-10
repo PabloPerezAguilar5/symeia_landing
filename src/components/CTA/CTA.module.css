@@ -1,0 +1,138 @@
+.cta {
+  background: var(--bg-dark);
+  padding: var(--section-py) var(--section-px);
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  color: var(--muted);
+  margin-bottom: 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+.panel {
+  background: transparent;
+  text-align: left;
+}
+
+.panel h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.panel p {
+  margin-bottom: 1.5rem;
+}
+
+.placeholder {
+  min-height: 200px;
+  background: var(--bg-card);
+  border: 1px solid var(--violet-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  padding: 1rem;
+}
+
+.divider {
+  width: 1px;
+  background: var(--violet-border);
+  align-self: stretch;
+}
+
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--whatsapp);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 16px 40px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.whatsappButton:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.note {
+  color: var(--muted);
+  font-style: italic;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.noteSmall {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 4rem 1rem;
+  }
+
+  .cta h2 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+  }
+
+  .cta p {
+    margin-bottom: 2rem;
+    font-size: var(--text-base);
+  }
+
+  .panel h3 {
+    font-size: var(--text-lg);
+  }
+
+  .placeholder {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 2rem 1rem;
+  }
+
+  .note {
+    font-size: var(--text-sm);
+    margin-top: 2rem;
+  }
+
+  .noteSmall {
+    font-size: var(--text-xs);
+  }
+}

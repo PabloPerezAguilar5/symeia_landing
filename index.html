@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symeia</title>
+    <link rel="icon" href="/6.svg" type="image/svg+xml">
+    <link rel="icon" href="/6.svg" sizes="any" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/6.svg">
+    <script>
+      (function() {
+        const originalWarn = console.warn;
+        const originalError = console.error;
+        console.warn = function(...args) {
+          if (args[0] && (
+            args[0].includes('Existing embed CSS Vars are being reset') ||
+            args[0].includes('[DEPRECATED] Use `createWithEqualityFn`') ||
+            args[0].includes('preloaded using link preload but not used') ||
+            args[0].includes('Deprecated feature used') ||
+            args[0].includes('Session History Item Has Been Marked Skippable')
+          )) {
+            return;
+          }
+          originalWarn.apply(console, args);
+        };
+        console.error = function(...args) {
+          if (args[0] && (
+            args[0].includes('Deprecated feature used')
+          )) {
+            return;
+          }
+          originalError.apply(console, args);
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
