@@ -12,7 +12,7 @@ const Footer = () => (
           <a href="#">LinkedIn</a>
           <a href="#">WhatsApp</a>
         </div>
-        <p className={styles.copy}>© 2025 Symeia. Todos os direitos reservados.</p>
+        <p className={styles.copy}>© 2026 Symeia. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
