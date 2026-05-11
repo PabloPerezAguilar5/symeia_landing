@@ -9,8 +9,8 @@ const Footer = () => (
         <p className={styles.tagline}>Inteligência que atende, agenda e cresce com você.</p>
         <div className={styles.links}>
           <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">WhatsApp</a>
+          <a href="https://www.linkedin.com/in/pablomperezaguilar/">LinkedIn</a>
+          <a href="https://wa.me/5511969166495?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20Symeia">WhatsApp</a>
         </div>
         <p className={styles.copy}>© 2026 Symeia. Todos os direitos reservados.</p>
       </div>
