@@ -39,7 +39,7 @@ const CTA = () => {
           Uma conversa de 30 minutos pode mudar a forma como sua clínica funciona.
         </p>
         <p className={styles.noteSmall}>
-          🔒 15 dias de garantia. Se não gostar, devolvemos tudo.
+          
         </p>
       </div>
     </section>

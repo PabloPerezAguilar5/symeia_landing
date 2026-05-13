@@ -24,15 +24,6 @@ const Results = () => (
             </AnimatedSection>
           ))}
         </div>
-        <div className={styles.guarantee}>
-          <div className={styles.icon}>🔒</div>
-          <p className={styles.guaranteeText}>
-            Confiamos tanto no que construímos que a proposta é simples:
-          </p>
-          <p className={styles.guaranteeStrong}>
-            Se em 15 dias você não estiver satisfeito, devolvemos tudo. Sem burocracia. Sem perguntas.
-          </p>
-        </div>
       </div>
     </div>
   </section>
