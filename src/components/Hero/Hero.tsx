@@ -31,7 +31,7 @@ const Hero = () => {
         </AnimatedSection>
         <AnimatedSection delay={400}>
           <div className={styles.videoWrapper}>
-            <VideoPlaceholder label="🎬 Demo video" youtubeId="rui78BOV_7U" />
+            <VideoPlaceholder label="🎬 Demo video" youtubeId="_7FjDhGkqBA" />
           </div>
         </AnimatedSection>
       </div>
