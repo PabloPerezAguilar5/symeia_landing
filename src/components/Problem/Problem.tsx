@@ -1,7 +1,19 @@
 import AnimatedSection from '../shared/AnimatedSection'
 import styles from './Problem.module.css'
 
-const problems = [
+type ProblemItem = {
+  icon: string
+  title: string
+  text: string
+}
+
+type ProblemProps = {
+  title?: string
+  problems?: ProblemItem[]
+  footerText?: string
+}
+
+const defaultProblems: ProblemItem[] = [
   {
     icon: '📱',
     title: 'Mensagem sem resposta',
@@ -15,7 +27,7 @@ const problems = [
   {
     icon: '😓',
     title: 'Recepcionista sobrecarregada',
-    text: 'Ela atende o telefone, responde o WhatsApp, confirma consulta e ainda precisa sorrir para o paciente na frente. Não dá.',
+    text: 'Ela atende o telefone, responde o WhatsApp, confirma consulta e ainda precisa sorrir para o paciente na frente. Não dá. ',
   },
   {
     icon: '📊',
@@ -34,11 +46,15 @@ const problems = [
   },
 ]
 
-const Problem = () => (
+const Problem = ({
+  title = 'Reconhece alguma dessas situações?',
+  problems = defaultProblems,
+  footerText = 'Se você se identificou com pelo menos um desses pontos, a Symeia foi feita para você.',
+}: ProblemProps) => (
   <section className={styles.problem}>
     <div className="container">
       <div className={styles.inner}>
-        <h2 className={styles.title}>Reconhece alguma dessas situações?</h2>
+        <h2 className={styles.title}>{title}</h2>
         <div className={styles.grid}>
           {problems.map((problem, index) => (
             <AnimatedSection key={problem.title} delay={100 * index}>
@@ -50,9 +66,7 @@ const Problem = () => (
             </AnimatedSection>
           ))}
         </div>
-        <p className={styles.footerText}>
-          Se você se identificou com pelo menos um desses pontos, a Symeia foi feita para você.
-        </p>
+        <p className={styles.footerText}>{footerText}</p>
       </div>
     </div>
   </section>

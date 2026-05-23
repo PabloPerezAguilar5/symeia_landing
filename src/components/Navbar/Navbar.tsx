@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/images/6.svg'
 import styles from './Navbar.module.css'
 
-const Navbar = () => {
+type NavbarProps = {
+  buttonLabel?: string
+}
+
+const Navbar = ({ buttonLabel = '→ Fale com a gente' }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -29,7 +34,7 @@ const Navbar = () => {
           <img src={logo} alt="Symeia logo" className={styles.brandLogo} />
         </div>
         <button className={styles.ctaButton} type="button" onClick={handleClick}>
-          → Fale com a gente
+          {buttonLabel}
         </button>
       </div>
     </nav>

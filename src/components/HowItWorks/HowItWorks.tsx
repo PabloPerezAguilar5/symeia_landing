@@ -1,7 +1,20 @@
 import AnimatedSection from '../shared/AnimatedSection'
 import styles from './HowItWorks.module.css'
 
-const steps = [
+type HowItWorksStep = {
+  number: string
+  title: string
+  text: string
+}
+
+type HowItWorksProps = {
+  heading?: string
+  subheading?: string
+  steps?: HowItWorksStep[]
+  closing?: string
+}
+
+const defaultSteps: HowItWorksStep[] = [
   {
     number: '①',
     title: 'Você nos conta sobre sua clínica',
@@ -10,7 +23,7 @@ const steps = [
   {
     number: '②',
     title: 'A gente configura tudo pra você',
-    text: 'Montamos o chatbot com a cara da sua clínica, integramos seu WhatsApp, seu calendário, as informações da sua clínica. e configuramos o CRM completo.',
+    text: 'Montamos o chatbot com a cara da sua clínica, integramos seu WhatsApp, seu calendário, as informações da sua clínica e configuramos o CRM completo.',
   },
   {
     number: '③',
@@ -19,12 +32,17 @@ const steps = [
   },
 ]
 
-const HowItWorks = () => (
+const HowItWorks = ({
+  heading = 'Começar é mais simples do que você imagina.',
+  subheading = 'Em 48 horas sua clínica já está operando com a Symeia.',
+  steps = defaultSteps,
+  closing = 'Sem complicação. Sem precisar de equipe de TI. Sem dor de cabeça.',
+}: HowItWorksProps) => (
   <section className={styles.howItWorks}>
     <div className="container">
       <div className={styles.inner}>
-        <h2>Começar é mais simples do que você imagina.</h2>
-        <p>Em 48 horas sua clínica já está operando com a Symeia.</p>
+        <h2>{heading}</h2>
+        <p>{subheading}</p>
         <div className={styles.steps}>
           {steps.map((step, index) => (
             <AnimatedSection key={step.number} delay={index * 100} className={styles.step}>
@@ -34,9 +52,7 @@ const HowItWorks = () => (
             </AnimatedSection>
           ))}
         </div>
-        <p className={styles.closing}>
-          Sem complicação. Sem precisar de equipe de TI. Sem dor de cabeça.
-        </p>
+        <p className={styles.closing}>{closing}</p>
       </div>
     </div>
   </section>
