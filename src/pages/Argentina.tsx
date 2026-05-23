@@ -122,8 +122,8 @@ const Argentina = () => (
       />
     </main>
     <Footer
-      email="hola@symeia.com"
-      tagline="Inteligencia que crece contigo."
+      email="hello@symeia.com"
+      tagline="Inteligencia que avanza con vos."
       copy="© 2026 Symeia. Todos los derechos reservados."
     />
   </>
