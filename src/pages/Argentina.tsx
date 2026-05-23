@@ -91,15 +91,15 @@ const Argentina = () => (
         buttonText="→ Quiero automatizar mi clínica"
         showVideo={false}
       />
-      <Problem
-        title="¿Te suena alguna de estas situaciones?"
-        problems={argentinaProblems}
-        footerText="Si te identificaste con al menos uno de estos puntos, Symeia está diseñada para vos."
-      />
       <Solution
         headerTitle="Conocé Symeia"
         headerText="Dos sistemas. Una sola plataforma. Todo pensado para clínicas estéticas."
         blocks={argentinaBlocks}
+      />
+      <Problem
+        title="¿Te suena alguna de estas situaciones?"
+        problems={argentinaProblems}
+        footerText="Si te identificaste con al menos uno de estos puntos, Symeia está diseñada para vos."
       />
       <HowItWorks
         heading="Empezar es más simple de lo que pensás."
