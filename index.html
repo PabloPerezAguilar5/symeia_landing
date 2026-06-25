@@ -1,39 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Symeia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="icon" href="/assets/images/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/assets/images/favicon/favicon.svg" sizes="any" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
-    <script>
-      (function() {
-        const originalWarn = console.warn;
-        const originalError = console.error;
-        console.warn = function(...args) {
-          if (args[0] && (
-            args[0].includes('Existing embed CSS Vars are being reset') ||
-            args[0].includes('[DEPRECATED] Use `createWithEqualityFn`') ||
-            args[0].includes('preloaded using link preload but not used') ||
-            args[0].includes('Deprecated feature used') ||
-            args[0].includes('Session History Item Has Been Marked Skippable')
-          )) {
-            return;
-          }
-          originalWarn.apply(console, args);
-        };
-        console.error = function(...args) {
-          if (args[0] && (
-            args[0].includes('Deprecated feature used')
-          )) {
-            return;
-          }
-          originalError.apply(console, args);
-        };
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>

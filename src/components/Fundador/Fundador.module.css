@@ -1,0 +1,70 @@
+.section {
+  background: var(--color-bg-dark);
+  padding: 6rem 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.role {
+  font-size: 0.9375rem;
+  color: var(--color-muted);
+  font-weight: 500;
+  margin-top: -0.25rem;
+}
+
+.bio {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-top: 0.25rem;
+}
+
+.linkedin {
+  color: var(--color-violet);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  margin-top: 0.25rem;
+}
+
+.linkedin:hover {
+  color: var(--color-violet-hover);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1rem;
+  }
+}

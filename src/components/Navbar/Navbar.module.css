@@ -1,20 +1,21 @@
 .navbar {
   position: fixed;
-  top: 3px;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  transition: background-color var(--transition), backdrop-filter var(--transition);
+  transition: background-color 0.2s ease, backdrop-filter 0.2s ease;
   background-color: transparent;
 }
 
 .scrolled {
-  background-color: rgba(10, 10, 26, 0.95);
+  background-color: rgba(10, 10, 26, 0.92);
   backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(108, 99, 255, 0.12);
 }
 
 .inner {
-  max-width: var(--max-width);
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
   height: 64px;
@@ -23,67 +24,142 @@
   justify-content: space-between;
 }
 
-.brand {
-  font-size: 1.8rem;
+.logo {
+  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--white);
-  display: inline-flex;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.logoAccent {
+  color: var(--color-violet);
+}
+
+.links {
+  list-style: none;
+  display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 2rem;
 }
 
-.brandHighlight {
-  color: var(--violet);
-}
-
-.brandLogo {
-  width: 98px;
-  height: 98px;
-  display: inline-block;
-  margin-left: -8px;
-}
-
-.ctaButton {
-  background: var(--violet);
-  color: #fff;
-  border-radius: var(--radius-pill);
-  padding: 10px 24px;
-  font-size: var(--text-sm);
-  font-weight: 600;
+.links button {
+  background: none;
   border: none;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: var(--transition);
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.links button:hover {
+  color: var(--color-text);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.toggleBtn {
+  background: transparent;
+  color: var(--color-muted);
+  border: none;
+  border-radius: 100px;
+  padding: 5px 11px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
   white-space: nowrap;
 }
 
-.ctaButton:hover {
-  background: var(--violet-hover);
-  transform: translateY(-1px);
+.toggleBtn:hover {
+  color: var(--color-text);
+}
+
+.toggleActive {
+  background: var(--color-violet);
+  color: var(--color-text) !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.bar1Open {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.bar2Open {
+  opacity: 0;
+}
+
+.bar3Open {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
-  .brand {
-    font-size: 1.25rem;
+  .hamburger {
+    display: flex;
   }
 
-  .ctaButton {
-    padding: 8px 16px;
-    font-size: 0.75rem;
+  .links {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    background: rgba(10, 10, 26, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(108, 99, 255, 0.15);
+    padding: 1.5rem 0;
   }
-}
 
-@media (max-width: 480px) {
-  .inner {
-    height: 56px;
-    padding: 0 1rem;
+  .links.open {
+    display: flex;
   }
 
-  .brand {
+  .links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .links button {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
     font-size: 1rem;
-  }
-
-  .ctaButton {
-    padding: 6px 12px;
-    font-size: 0.7rem;
   }
 }
