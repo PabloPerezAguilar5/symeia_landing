@@ -32,7 +32,9 @@ const Contacto = () => {
         </a>
         <div className={styles.buttons}>
           <a
-            href={`mailto:hello@symeia.com?subject=${t.contacto.btn1Subject}`}
+            href="https://cal.com/symeia-fn0v09/reunion-de-30-min"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.ghostBtn}
           >
             {t.contacto.btn1}
