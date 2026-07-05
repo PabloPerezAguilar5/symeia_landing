@@ -26,7 +26,7 @@ const Productos = () => {
     <section id="productos" ref={ref} className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.heading}>{t.productos.heading}</h2>
-        <div className={styles.single}>
+        <div className={styles.grid}>
           <div className={styles.card}>
             <span className={styles.badgeActive}>{t.productos.badge}</span>
             <h3 className={styles.productName}>Wendly</h3>
@@ -38,6 +38,19 @@ const Productos = () => {
               className={styles.productLink}
             >
               {t.productos.link}
+            </a>
+          </div>
+          <div className={styles.card}>
+            <span className={styles.badgeActive}>{t.productos.clinicBadge}</span>
+            <h3 className={styles.productName}>{t.productos.clinicName}</h3>
+            <p className={styles.productDesc}>{t.productos.clinicDesc}</p>
+            <a
+              href={t.productos.clinicHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.productLink}
+            >
+              {t.productos.clinicLink}
             </a>
           </div>
         </div>

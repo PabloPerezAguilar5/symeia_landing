@@ -20,6 +20,11 @@ export const translations = {
       badge: 'Disponible ahora',
       desc: 'Chatbot de WhatsApp con IA + CRM para negocios de servicios. Agendamiento automático, seguimiento de clientes y reportes en tiempo real.',
       link: 'Conocer Wendly →',
+      clinicBadge: 'Nuevo',
+      clinicName: 'Wendly Clinic',
+      clinicDesc: 'Chatbot + CRM premium exclusivo para clínicas (estéticas, médicas, odontológicas).',
+      clinicLink: 'Conocer Wendly Clinic →',
+      clinicHref: 'https://hellowendly.symeia.com/clinic',
     },
     fundador: {
       role: 'Founder & CEO — Symeia',
@@ -61,6 +66,11 @@ export const translations = {
       badge: 'Disponível agora',
       desc: 'Chatbot de WhatsApp com IA + CRM para negócios de serviços. Agendamento automático, acompanhamento de clientes e relatórios em tempo real.',
       link: 'Conhecer Wendly →',
+      clinicBadge: 'Novo',
+      clinicName: 'Wendly Clinic',
+      clinicDesc: 'Chatbot + CRM premium exclusivo para clínicas (estéticas, médicas, odontológicas).',
+      clinicLink: 'Conhecer Wendly Clinic →',
+      clinicHref: 'https://hellowendly.symeia.com/clinic/br',
     },
     fundador: {
       role: 'Fundador & CEO — Symeia',
